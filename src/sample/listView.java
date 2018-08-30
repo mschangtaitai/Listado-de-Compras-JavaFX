@@ -1,16 +1,16 @@
 package sample;
 
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import administrator.Administrator;
 import article.Article;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
 public class ListView{
     private String listName;
@@ -43,7 +43,7 @@ public class ListView{
     @FXML
     private observableList<Item> data;
 
-    public void showData(){
+    public void showData(){//Mostrar todos los datos
         listName.setText(this.listName);
         listDescription.setText(this.description);
         Double Total = Lists.getInstance().getLists(this.listName).getTotal();
@@ -68,17 +68,11 @@ public class ListView{
         this.itemsTable.setItems(data);
 
     }
-    public void setProperties(String name, String description){
+    public void setProperties(String name, String description){//Asignar propiedades
         this.currentListName = name;
         this.description = description;
         Administrator administrator = Administrator.getInstance();
         administrator.addList(name, description);
-
-
-    }
-    public void redirectedFromArticleAdded(String name){
-        this.currentListName = name;
-        this.description = Administrator.getInstance().getListByName(this.currentListName).getDescription();
     }
 
     public void setListToEdit(String nameOfList){
@@ -86,10 +80,7 @@ public class ListView{
         this.description = Administrator.getInstance().getListByName(this.currentListName).getDescription();
     }
 
-
-
-
-    public void onAddItem(){
+    public void onAddItem(){//Agregar item
         Parent window;
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("addItem.fxml"));
@@ -106,7 +97,7 @@ public class ListView{
             e.printStackTrace();
         }
     }
-    public void returnButton(){
+    public void returnButton(){//Boton de regresar
         Parent window;
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));

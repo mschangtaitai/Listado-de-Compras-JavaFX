@@ -27,24 +27,20 @@ public class Item {
     public SimpleIntegerProperty quantityProperty() {
         return quantity;
         }
-
     public SimpleDoubleProperty priceProperty() {
         return price;
         }
-
     public SimpleDoubleProperty totalProperty(){
         return total;
         }
-
     public SimpleBooleanProperty isCompleteProperty() {
         return completed;
         }
-
     public String getName(){
         return this.name.get();
         }
 
-    public void complete(){
+    public void complete(){//Marcar item como comprado
         if (!this.getCompleted()){
         this.state = new SimpleBooleanProperty(true);
         }
@@ -53,6 +49,7 @@ public class Item {
         }
     }
 
+    //Obtener y establecer datos
     public int getQuantity(){
         return this.quantity.get();
         }

@@ -5,6 +5,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import list.List;
+import javafx.scene.control.TableView;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,11 +18,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import list.List;
-import javafx.scene.control.TableView;
-import java.io.IOException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class Controller {
 
@@ -41,7 +41,7 @@ public class Controller {
     Button editListButton;
     private ObservableList<List> data;
     @FXML
-    public void initialize() {
+    public void initialize() {//Inicializar el Controlador
         DateTimeFormatter myDateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
         this.data = FXCollections.observableArrayList(Administrator.getInstance().getListBook());

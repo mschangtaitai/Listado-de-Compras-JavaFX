@@ -1,16 +1,16 @@
 package list;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import article.Article;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
-
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 public class List {
     SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy");

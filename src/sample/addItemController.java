@@ -1,17 +1,18 @@
 package sample;
 
-import administrator.Administrator;
-import article.Article;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import administrator.Administrator;
+import article.Article;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 
-public class AddItemController {
+
+public class AddItemController {//Controlador para agregar items
     String nameOfList;
     @FXML
     TextField nameTextField;
@@ -33,9 +34,9 @@ public class AddItemController {
 
     public void assingList(String name){
         this.nameOfList = name;
-    }
+    }//Asignar lista en la que se encuentra el item
 
-    public void onClickAddItem(){
+    public void onClickAddItem(){//Boton para agregar el item
         Integer quantity = Integer.parseInt(itemQuantity.getText());
         Double price = Double.parseDouble(itemPrice.getText());Item myItem = new Item(itemName.getText(), quantity, price);
         Lists.getLists().addItem(this.nameOfList,myItem);
@@ -57,7 +58,7 @@ public class AddItemController {
             e.printStackTrace();
         }
     }
-    public void cancelButton(){
+    public void cancelButton(){//Boton de regresar
         Parent window;
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("addView.fxml"));
