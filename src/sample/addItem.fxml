@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="327.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddItem">
+   <children>
+      <Label layoutX="85.0" layoutY="49.0" text="Agregar nuevo articulo">
+         <font>
+            <Font name="Ayuthaya" size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelButton" layoutX="369.0" layoutY="281.0" mnemonicParsing="false" onAction="#onCancel" text="Cancelar" />
+      <Button fx:id="addItem" layoutX="464.0" layoutY="281.0" mnemonicParsing="false" onAction="#onClickAddItem" text="Crear" />
+      <Label layoutX="85.0" layoutY="127.0" text="Nombre:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="172.0" text="Cantidad:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="220.0" text="Precio:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="itemName" layoutX="173.0" layoutY="125.0" prefHeight="27.0" prefWidth="343.0" />
+      <TextField fx:id="itemQuantity" layoutX="173.0" layoutY="170.0" prefHeight="27.0" prefWidth="343.0" />
+      <TextField fx:id="itemPrice" layoutX="173.0" layoutY="218.0" prefHeight="27.0" prefWidth="343.0" />
+   </children>
+</AnchorPane>

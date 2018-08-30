@@ -20,13 +20,14 @@
       <TableView prefHeight="382.0" prefWidth="468.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
         <columns>
           <TableColumn prefWidth="119.0" text="Nombre de lista" />
-            <TableColumn prefWidth="76.0" text="Column X" />
-          <TableColumn prefWidth="117.0" text="C2" />
+            <TableColumn prefWidth="76.0" text="Fecha" />
+          <TableColumn prefWidth="94.0" text="Pendientes" />
+            <TableColumn prefWidth="108.0" text="Estimado" />
         </columns>
       </TableView>
       <Button fx:id="addListButton" mnemonicParsing="false" onAction="#openAddList" text="Crear nueva lista" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button contentDisplay="RIGHT" mnemonicParsing="false" text="Eliminar lista" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-      <Button mnemonicParsing="false" text="Editar lista" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="deleteListButton" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onDeleteListSelected" text="Eliminar lista" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Button fx:id="editListButton" mnemonicParsing="false" onAction="#onEditListSelected" text="Editar lista" GridPane.columnIndex="2" GridPane.rowIndex="3" />
    </children>
    <rowConstraints>
       <RowConstraints maxHeight="85.0" minHeight="0.0" prefHeight="0.0" />
